@@ -2,28 +2,48 @@
 
 int main(int argc, char const *argv[])
 {
+	if (argc != 2)
+	{
+		printf("ERROR: You need one argument.\n");
+		// this is how you abort program
+		return 1;
+	}
+
 	int i = 0;
-
-	// go through each string in argv
-	// why am I skipping argv[0]
-	for (i = 0; i < argc; i++)
+	for (i = 0; argv[1][i] != '\0'; i++)
 	{
-		printf("arg %d: %s\n", i, argv[i]);
+		char letter = argv[1][i];
+
+		switch (letter)
+		{
+			case 'a': case 'A':
+			printf("%d: 'A'\n", i);
+			break;
+
+			case 'e': case 'E':
+			printf("%d: 'E'\n", i);
+			break;
+
+			case 'i': case 'I':
+			printf("%d: 'I'\n", i);
+			break;
+
+			case 'o': case 'O':
+			printf("%d: 'O'\n", i);
+			break;
+
+			case 'u': case 'U':
+			printf("%d: 'U'\n", i);
+			break;
+
+			case 'y': case 'Y':
+			printf("%d: 'Y'\n", i);
+			break;
+
+			default:
+			printf("%d: %c is not a vowel\n", i, letter);
+		}
 	}
-
-	// let us make out own array of strings
-	char * states[] = 
-	{
-		"California", "Oregon",
-		"Washington", "Texas"
-	};
-
-	int num_states = 4;
-
-	for (i = 0; i < num_states; i++)
-	{
-		printf("state %d: %s\n", i, states[i]);
-	}
-
+	
 	return 0;
 }

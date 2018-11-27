@@ -9,6 +9,10 @@ int main(int argc, char *argv[])
 		"Mary", "John", "Lisa"
 	};
 
+	printf("The size of ages is %d\n", sizeof(ages));
+	printf("The size of names is %d\n", sizeof(names));
+	printf("The size of names[0] is %d\n", sizeof(names[0]));
+
 	// safely get the size of ages
 	int count = sizeof(ages)/sizeof(ages[0]);
 	int i = 0;

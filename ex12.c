@@ -4,7 +4,7 @@ int main(int argc, char const *argv[])
 {
 	int areas[] = {10, 12, 13, 14, 20};
 	char name[] = "Zard";
-	char *
+	char *name2 = "Zard";
 	char full_name[] = {'Z','e','d',' ','A','.',' ','S','h','a','w','\0'};
 
 	printf("The size of an int: %ld\n", sizeof(int));
@@ -15,5 +15,7 @@ int main(int argc, char const *argv[])
 
 	printf("The size of a char: %ld \n", sizeof(char));
 	printf("The size of name (char[]): %ld\n", sizeof(name));
+	printf("The size of name2 (char*): %ld\n", sizeof(name2));	
+	
 	return 0;
 }

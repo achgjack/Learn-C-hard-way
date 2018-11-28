@@ -207,7 +207,6 @@ int main(int argc, char *argv[])
 		case 'g':
 		if (argc != 4)
 			die("Need an id to get");
-
 		Database_get(conn, id);
 
 		case 's':

@@ -24,8 +24,8 @@ typedef struct Database
 
 typedef struct Connection
 {
-	FILE *file;
-	Database *db;
+	FILE *file;     // in hard-disk
+	Database *db;   // in memory
 } Connection;
 
 void die(const char *message)
@@ -49,6 +49,7 @@ void Address_print(Address *addr)
 
 void Database_load(Connection *conn)
 {
+	// read database from the disk file to the memory
 	int rc = fread(conn->db, sizeof(Database), 1, conn->file);
 	if (rc != 1)
 		die("Failed to load database.");

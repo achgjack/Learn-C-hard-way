@@ -16,6 +16,7 @@ void set_age(int age)
     THE_AGE = age;
 }
 
+// return the old ratio
 double update_ratio(double new_ratio)
 {
     static double ratio = 1.0;
